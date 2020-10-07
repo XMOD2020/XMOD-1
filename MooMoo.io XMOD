@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name        X MOD 2
+// @name        X MOD
 // @namespace    -
-// @version     08/20
+// @version     2.0
 // @description Welcome To The Leading 2020 MooMoo.io Hack.
-// @author       .:X:.
+// @author       X
 // @match        *://moomoo.io/*
 // @match        *://sandbox.moomoo.io/*
 // @match        *://dev.moomoo.io/*
@@ -12,22 +12,46 @@
 // @require http://code.jquery.com/jquery-3.3.1.min.js
 // @require https://code.jquery.com/ui/1.12.0/jquery-ui.min.js
 // @require https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js
+// @icon         https://th.bing.com/th/id/OIP.y2URGFDTLMVu-8ra8raTPgHaHa?pid=Api&rs=1
 /*
+
+                                                          _______________________
+                                                        / \                      \
+                                                       |   |       X Mod         |
+                                                        \_ |     Version: ?      |
+                                                           | Last Edit 31/08/2020|
+                                                           |                     |
+                                                           |  _____     _____    |
+                                                           |  \     \  /    /    |
+                                                           |   \     \/    /     |
+                                                           |    \    /\   /      |
+                                                           |    /   /  \   \     |
+                                                           |   /   /    \   \    |
+                                                           |  /___/      \___\   |
+                                                           |                     |
+                                                           |   __________________|__
+                                                           |  /                    /
+                                                           \_/____________________/
+RECCOMENDED MUSIC TO LISTEN TO WHILST GAMING! -
+[SIMPLE][NO VOICE] - https://www.youtube.com/watch?v=jrTMMG0zJyI
+[SIMPLE][NO VOICE] - https://www.youtube.com/watch?v=yY7iGa4t9-I
+[VOICE] - https://www.youtube.com/watch?v=FVF40aErGls
+
 */
 // ==/UserScript==
 var doinginsta = false;
 var autopit = false;
 let changelook = false;
-let instaChat = ".:X:."
-let quadChat = "X" // change if you want to
+let instaChat = " ~ X_MOD ~ "
+let quadChat = "Leaving Tribe!" // You can change
 $("#consentBlock").css({display: "none"});
 //$("#youtuberOf").css({display: "none"});
 if(changelook == true){
-$("#mapDisplay").css({background: `url('')`});
+$("#mapDisplay").css({background: `url('https://i.imgur.com/ihSJ6Y6.png')`});
 }
-$('#ageBarContainer')['append']('<div style=\"width: 100%;position: absolute;top: 100px;text-align: center;color: aqua;font-size: 12px;\">\x0aR - Katana + Bow + Bull Helmet + Turret Gear Instakill | V - Spike | T - Toggle Auto heal | G - Spike + Boost | Q(hold) - Anti Insta|\x0a</div>')
-document.getElementById("gameName").innerHTML = "X";
-$('#gameName').css({'color': '#AE0000',
+$('#ageBarContainer')['append']('<div style=\"width: 100%;position: absolute;top: 100px;text-align: center;color: aqua;font-size: 12px;\">\x0aR - Instakill | V - Spike | T - Toggle Auto heal | G - Spike + Boost | Q(hold) - Anti Insta|\x0a</div>')
+document.getElementById("gameName").innerHTML = "✵ ~X~ ✵";
+$('#gameName').css({'color': 'aqua',
                     'text-shadow': '0 1px 0 rgba(255, 255, 255, 0), 0 2px 0 rgba(255, 255, 255, 0), 0 3px 0 rgba(255, 255, 255, 0), 0 4px 0 rgba(255, 255, 255, 0), 0 5px 0 rgba(255, 255, 255, 0), 0 6px 0 rgba(255, 255, 255, 0), 0 7px 0 rgba(255, 255, 255, 0), 0 8px 0 rgba(255, 255, 255, 0), 0 9px 0 rgba(255, 255, 255, 0)',
                     'text-align': 'center',
                     'font-size': '126px',
@@ -46,11 +70,11 @@ document.getElementById("allianceButton").style.color = "aqua";
 document.getElementById("chatButton").style.color = "aqua";
 document.getElementById("storeButton").style.color = "aqua";
 document.getElementById("leaderboard").append('');
-document.getElementById('loadingText').innerHTML = "Made By .:X:.";
+document.getElementById('loadingText').innerHTML = "Made By X";
 document.getElementById("loadingText").style.color = "aqua";
 let _1536E = false;
-//https://i.imgur.com/fgFsQJp.png
-//https://imgur.com/9K3aTqY.png
+//https://i.imgur.com/ihSJ6Y6.png
+//https://i.imgur.com/ihSJ6Y6.png
 document.getElementById("moomooio_728x90_home").style.display = "none";
 $("#moomooio_728x90_home").parent().css({display: "none"});
 
@@ -61,7 +85,7 @@ const ctx = canvas.getContext("2d");
 
 
 window.onbeforeunload = null;
-$("#gameCanvas").css('cursor', 'url(http://cur.cursors-4u.net/cursors/cur-11/cur1029.cur), default');
+$("#gameCanvas").css('cursor', 'url(https://cur.cursors-4u.net/symbols/sym-6/sym580.cur), default');
 
 
 let mouseX;
@@ -79,7 +103,7 @@ setInterval(() => {
      killcount = parseInt(document.getElementById("killCounter").innerText);
         if (killcount > kills) {
             boom.play();
-            //doNewSend(["ch", ["SAMmod"]);
+            //doNewSend(["ch", ["X_MOD"]);
         }
         kills = killcount;
 },20);
@@ -190,7 +214,7 @@ let myPlayer = {
     isSkull: null
 };
 
-let healSpeed = 100;
+let healSpeed = 150000; //COME BACK TO THE AUTOHEAL
 var healSpeedd = 100000000;
 var messageToggle = 1;
 var clanToggle = 0;
@@ -525,8 +549,8 @@ document.addEventListener('keydown', (e)=>{
         }
         doNewSend(["ch", [quadChat]]);
         setTimeout( () => {
-            document.getElementById("woodDisplay").innerHTML = "X";
-            document.getElementById("stoneDisplay").innerHTML = "X";
+            document.getElementById("woodDisplay").innerHTML = "Leave";
+            document.getElementById("stoneDisplay").innerHTML = "Team";
             doNewSend(["9", [null]]);
         }, 75);
     }
@@ -535,7 +559,7 @@ document.addEventListener('keydown', (e)=>{
     }
 if(e.keyCode == 82 && document.activeElement.id.toLowerCase() !== 'chatbox') {
         autoaim = true;
-         doNewSend(["ch", ['   X MOD   ']]);
+         doNewSend(["ch", ['~ X MOD ~ ']]);
         doNewSend(["5", [primary, true]]);
         doNewSend(["13c", [0, 7, 0]]);
         doNewSend(["13c",[0,11,0]]);
@@ -717,9 +741,9 @@ if(e.keyCode == 82 && document.activeElement.id.toLowerCase() !== 'chatbox') {
     }
     if(e.keyCode == 34 && document.activeElement.id.toLowerCase() !== 'chatbox') {
         if(healSpeedd != 10){
-            healSpeedd += 1;
+            healSpeedd += 10000;
         }else{
-            healSpeedd = 1;
+            healSpeedd = 10000;
         }
             doNewSend(["ch",["AutoHeal Speed: " + healSpeedd + "/10"]]);
         healSpeed = (10 - healSpeedd) * 10 + 40;
@@ -790,11 +814,11 @@ function dist(a, b){
 }
 
 
-document.title = "Sam Mod";
+document.title = "X MOD";
 if(changelook == true){
-document.getElementById("gameName").innerHTML = "Sam Mod";
-document.getElementById("leaderboard").append('Sam Mod');
-document.getElementById("diedText").innerHTML = " NO WORRY ";
+document.getElementById("gameName").innerHTML = "X MOD";
+document.getElementById("leaderboard").append('X MOD');
+document.getElementById("diedText").innerHTML = " Oh well ";
 document.getElementById("gameName").style.color = "#0080FF";
 document.getElementById('nameInput').style.color = "#0080FF";
 document.getElementById("loadingText").style.color = "#99ccff";
@@ -811,7 +835,7 @@ document.getElementById("leaderboardData").style.color = "#99ccff";
 document.getElementById("ageText").style.color = "#000033";
 document.getElementById("leaderboard").style.color = "#0080ff";
 document.getElementById("diedText").style.color = "#101010";
-document.getElementById("ageBar").style.color = "#99ccff";
+document.getElementById("ageBar").style.color = "aqua";
 document.getElementById('enterGame').style.color = "#0000ff";
 document.getElementById('smallLinks').style.color = "#0000ff";
 document.getElementById('altServer').style.color = "#0000ff";
@@ -954,7 +978,7 @@ $(".downloadBadge").remove();
 var getElement = document.querySelector('#enterGame');
 getElement.style.backgroundColor = "#000099";
 getElement.style.color = "#000000";
-$('#gameName').css({'color': '#000000',
+$('#gameName').css({'color': 'aqua',
                     'text-shadow': '0 1px 0 rgba(255, 255, 255, 0)',
                     'text-align': 'center',
                     'font-size': '100px',
@@ -1085,7 +1109,7 @@ var SpikeGearK;
 var EmpHelmetK = 73;
 var SpikeK = 86;
 var TrapK = 70;
-var autochatmsg = "I am super penguin";
+var autochatmsg = "X MOD PRO";
 var trigger;
 var responder;
 
@@ -1095,15 +1119,15 @@ menuChange.id = "mainSettings";
 menuChange.innerHTML = `
 <div id="simpleModal" class="modal">
     <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header"color: aqua>
             <span class="closeBtn">&times;</span>
-            <h2 style="font-size: 30px; font:"Comic Sans MS";">Settings</h2>
-            <h4 style="font-size: 10px; font:"Comic Sans MS";">If You Don't Want AutoChats Then Leave It Blank</h4>
+            <h2 style="font-size: 30px; font:"Comic Sans MS; color: aqua";">Settings</h2>
+            <h4 style="font-size: 10px; font:"Comic Sans MS; color: aqua";">No AutoChat = Blank</h4>
         </div>
         <div class="modal-body" style="font-size: 15px;">
             <div class="flexControl">
-                <h3 style="color: #428bca; font-size: 15px;">Hat Settings</h3>
-                <h3 class="menuPrompt">Tank Gear: </h3> <input value="${String.fromCharCode(TankGearK)}" id="tankGear" class="keyPressLow" color="white" onkeyup="this.value = this.value.toUpperCase();" maxlength="1" type="text"/>
+                <h3 style="color: aqua; font-size: 15px;">Hat Settings</h3>
+                <h3 class="menuPrompt">Tank Gear: </h3> <input value="${String.fromCharCode(TankGearK)}" id="tankGear" class="keyPressLow" color="aqua" onkeyup="this.value = this.value.toUpperCase();" maxlength="1" type="text"/>
                 <h3 class="menuPrompt">Bull Helmet: </h3> <input value="${String.fromCharCode(BullHelmetK)}" id="bullHelm" class="keyPressLow" onkeyup="this.value = this.value.toUpperCase();" maxlength="1" type="text"/>
                 <h3 class="menuPrompt">Soldier Helmet: </h3> <input value="${String.fromCharCode(SoldierHelmetK)}" id="soldier" class="keyPressLow"onkeyup="this.value = this.value.toUpperCase();"  maxlength="1" type="text"/>
                 <h3 class="menuPrompt">Turret Gear: </h3> <input value="${String.fromCharCode(TurretGearK)}" id="turret" class="keyPressLow" maxlength="1" onkeyup="this.value = this.value.toUpperCase();" type="text"/>
@@ -1113,11 +1137,11 @@ menuChange.innerHTML = `
                 <h3 class="menuPrompt">Auto Chat Message: </h3> <input value="${String.fromCharCode(autochatmsg)}" id="AutoChat" class="keyPressLow" maxlength="30" type="text"/>
                  <h3 class="menuPrompt">Insta Chat Message: </h3> <input value="${String.fromCharCode(instaChat)}" id="AutoInstaChat" class="keyPressLow" " maxlength="30" type="text"/>
                 <hr>
-                <h3 style="font-size: 15px; color: #428bca">Auto responder by Azari</h3>
+                <h3 style="font-size: 15px; color: aqua">Auto respond</h3>
                  <h3 class="menuPrompt">Trigger: </h3> <input value="${trigger}" id="trigger" class="keyPressLow" " maxlength="30" type="text"/>
                  <h3 class="menuPrompt">Response: </h3> <input value="${responder}" id="responder" class="keyPressLow" " maxlength="30" type="text"/>
                 <hr>
-                <h3 style="font-size: 15px; color: #428bca">Other Settings</h3>
+                <h3 style="font-size: 15px; color: aqua">Reccomended Optional Settings</h3>
 
                 <label class="container" style="font-size: 12px; color: white">No Lag!!
                     <input type="checkbox" id="Check1">
